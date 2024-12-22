@@ -6,7 +6,7 @@ for those who don't want to use a hex editor to do it themselves.
 ## Patches that this applies
 
 Each one of these can be toggled individually.
-(Original byte values are given for reference.)
+(All values are in hex. Original byte values are given for reference.)
 
 * Keeps the game running even when not in focus:
 ```
@@ -17,7 +17,7 @@ Each one of these can be toggled individually.
 * Changes the 320x240 windowed mode to multiply it by a scale factor:
 ```
 Example for 3x scale (960x720):
-0xB4A6: 01 -> 03           (3x scale)
+0xB4A6:  01 -> 03          (3x scale)
 0x127C2: 40 01 -> C0 03    (little-endian, 0x3C0 = 960)
 0x127CC: F0 00 -> D0 02    (little-endian, 0x2D0 = 720)
 These last two edits fix the font size and are the same regardless of the scale factor:
@@ -33,7 +33,8 @@ These last two edits fix the font size and are the same regardless of the scale 
 
 ## Usage/Building
 
-Most people can just go to the Releases page and download the patcher from there.
+Most people can just go to the [Releases page](https://github.com/periwinkle9/CSSpeedrunPatcher/releases)
+and download the patcher from there.
 
 If you want to build this yourself, simply compile all of the .cpp files together
 with a C++17-compatible compiler.
